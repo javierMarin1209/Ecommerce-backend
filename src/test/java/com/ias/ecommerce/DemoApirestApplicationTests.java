@@ -1,4 +1,4 @@
-package com.ronaldarias.apirest;
+package com.ias.ecommerce;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
