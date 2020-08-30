@@ -12,7 +12,6 @@ import com.ias.Ecommerce.object.UserType;
 public class User {
 	
 	@Id
-	//@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="email")
 	private String email;
 	
