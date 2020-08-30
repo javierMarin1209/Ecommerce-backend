@@ -28,7 +28,6 @@ release.properties
 .project
 .settings/
 bin/
-tmp/
 *.tmp
 *.bak
 *.swp
