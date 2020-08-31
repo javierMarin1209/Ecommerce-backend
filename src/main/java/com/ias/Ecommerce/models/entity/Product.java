@@ -6,6 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+import org.springframework.lang.NonNull;
+import org.springframework.validation.annotation.Validated;
 
 import com.ias.Ecommerce.object.ProductStatus;
 
@@ -19,22 +24,30 @@ public class Product {
 	private int productId;
 	
 	@Column(name="name")
+	@NonNull
+	@NotEmpty
 	private String name;
 	
 	@Column(name="description")
+	@NonNull
+	@NotEmpty
 	private String description;
 	
 	@Column(name="basePrice")
+	@NonNull
 	private double basePrice;
 	
 	@Column(name="taxRate")
+	@NonNull
 	private double taxRate;
 	
 	@Column(name="productStatus")
+	@NonNull
 	private ProductStatus productStatus;
 	
 	@Column(name="inventoryQuantity")
 	private int inventoryQuantity;
+	
 
 	public int getProductId() {
 		return productId;
