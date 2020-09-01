@@ -14,10 +14,18 @@ public interface OrderService {
 	
 	public Response FindByUser(RequestOrder email);
 	
-	public Response ChangeStatus(RequestOrder order);
+	public Response FindOne(RequestOrder order);
+	
+	public Response PayOrder(RequestOrder order);
+	
+	public Response DeliveryOrder(RequestOrder order);
 	
 	public Response AddProduct(RequestOrder order);
 	
 	public Response DeleteProduct(RequestOrder order);
+	
+	public Response FindAllByStatus(Order order);
+	
+	public Response CountAllByStatus(Order order);
 
 }

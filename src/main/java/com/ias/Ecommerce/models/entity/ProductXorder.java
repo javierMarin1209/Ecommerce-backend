@@ -35,6 +35,9 @@ public class ProductXorder {
 	
 	@Column(name="orderOrderId")
 	private int orderOrderId;
+	
+	@Column(name="productName")
+	private String productName;
 
 	public int getId() {
 		return id;
@@ -92,16 +95,21 @@ public class ProductXorder {
 		this.orderOrderId = orderOrderId;
 	}
 
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
 	@Override
 	public String toString() {
 		return "ProductXorder [id=" + id + ", quantity=" + quantity + ", basePrice=" + basePrice + ", taxPrice="
 				+ taxPrice + ", totalPrice=" + totalPrice + ", productProductId=" + productProductId + ", orderOrderId="
-				+ orderOrderId + ", getId()=" + getId() + ", getQuantity()=" + getQuantity() + ", getBasePrice()="
-				+ getBasePrice() + ", getTaxPrice()=" + getTaxPrice() + ", getTotalPrice()=" + getTotalPrice()
-				+ ", getProductProductId()=" + getProductProductId() + ", getOrderOrderId()=" + getOrderOrderId()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+				+ orderOrderId + ", productName=" + productName + "]";
 	}
+
 	
 	
 	

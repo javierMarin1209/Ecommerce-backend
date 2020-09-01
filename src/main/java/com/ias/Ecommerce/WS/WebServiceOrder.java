@@ -28,4 +28,74 @@ public class WebServiceOrder {
 	public Response Create(@RequestBody RequestOrder order) {
 		return orderService.Create(order);
 	}
+	
+	@PostMapping("/findAll")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response FindAll() {
+		return orderService.FindAll();
+	}
+	
+	@PostMapping("/delete")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response Delete(@RequestBody RequestOrder order)  {
+		return orderService.Delete(order);
+	}
+	
+	@PostMapping("/findByUser")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response findByUser(@RequestBody RequestOrder order)  {
+		return orderService.FindByUser(order);
+	}
+	
+	@PostMapping("/findOne")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response findOne(@RequestBody RequestOrder order)  {
+		return orderService.FindOne(order);
+	}
+	
+	@PostMapping("/payOrder")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response payOrder(@RequestBody RequestOrder order)  {
+		return orderService.PayOrder(order);
+	}
+	
+	@PostMapping("/delivery")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response delivery(@RequestBody RequestOrder order)  {
+		return orderService.DeliveryOrder(order);
+	}
+	
+	@PostMapping("/addProduct")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response AddProduct(@RequestBody RequestOrder order)  {
+		return orderService.AddProduct(order);
+	}
+	
+	@PostMapping("/deleteProduct")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response DeleteProduct(@RequestBody RequestOrder order)  {
+		return orderService.DeleteProduct(order);
+	}
+	
+	@PostMapping("/findAllByStatus")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response FindAllByStatus(@RequestBody Order status)  {
+		return orderService.FindAllByStatus(status);
+	}
+	
+	@PostMapping("/countAllByStatus")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response CountAllByStatus(@RequestBody Order status)  {
+		return orderService.CountAllByStatus(status);
+	}
 }
