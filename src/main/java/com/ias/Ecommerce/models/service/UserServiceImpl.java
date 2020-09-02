@@ -99,7 +99,6 @@ public class UserServiceImpl implements UserService{
 						confirmUser.get().setTmpPassword(null);
 						response.setSuccess(true);
 						response.setError("Login exitoso");
-						confirmUser.get().setPassword("");
 						response.setResponse(confirmUser.get());
 					}else {
 						if(confirmUser.get().getAttempt()>=3) {

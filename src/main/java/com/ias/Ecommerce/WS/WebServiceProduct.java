@@ -33,6 +33,12 @@ public class WebServiceProduct {
 	public Response FindAll() {
 		return productService.FindAll();
 	}
+	@PostMapping("/findAllPublic")
+	@CrossOrigin(origins = "*")
+	@ResponseStatus(HttpStatus.OK)
+	public Response findAllPublic() {
+		return productService.FindAllPublic();
+	}
 	
 	@PostMapping("/update")
 	@CrossOrigin(origins = "*")

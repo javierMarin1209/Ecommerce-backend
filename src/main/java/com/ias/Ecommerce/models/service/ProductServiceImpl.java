@@ -10,6 +10,7 @@ import com.ias.Ecommerce.models.dao.ProductDAO;
 import com.ias.Ecommerce.models.dao.UserDAO;
 import com.ias.Ecommerce.models.entity.Product;
 import com.ias.Ecommerce.models.entity.User;
+import com.ias.Ecommerce.object.ProductStatus;
 import com.ias.Ecommerce.object.RequestProduct;
 import com.ias.Ecommerce.object.Response;
 import com.ias.Ecommerce.object.UserType;
@@ -68,6 +69,25 @@ public class ProductServiceImpl implements ProductService{
 		List<Product> products;
 			try {
 				products=(List<Product>) productDAO.findAll();
+				response.setSuccess(true);
+				response.setResponse(products);
+				response.setError("Consulta exitosa");
+			}catch (Exception e) {
+				response.setSuccess(false);
+				if(e.getCause().getCause()!=null) {
+					response.setError(e.getCause().getCause().getMessage());
+				}else {
+					response.setError(e.getCause().getMessage());
+				}
+				
+			}
+			return response;
+		}
+	public Response FindAllPublic() {
+		Response response= new Response();
+		List<Product> products;
+			try {
+				products=(List<Product>) productDAO.findAllPublic(ProductStatus.Publicado);
 				response.setSuccess(true);
 				response.setResponse(products);
 				response.setError("Consulta exitosa");

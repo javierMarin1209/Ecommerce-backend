@@ -7,10 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
 
 import org.springframework.lang.NonNull;
-import org.springframework.validation.annotation.Validated;
 
 import com.ias.Ecommerce.object.ProductStatus;
 

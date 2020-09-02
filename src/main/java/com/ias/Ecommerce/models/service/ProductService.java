@@ -9,6 +9,8 @@ public interface ProductService {
 	
 	public Response FindAll();
 	
+	public Response	FindAllPublic();
+	
 	public Response Update(RequestProduct requestProduct);
 	
 	public Response Delete(RequestProduct requestProduct);
